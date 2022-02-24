@@ -3,6 +3,12 @@ sequenceDiagram
     autonumber
     Stofnanir->>Advania:request
     Advania->User-Profile:x-road
+    User-Profile->Queue:request
+    Workers->Queue:request
+    Workers->Firebase:request
+    Firebase->Island.is-client:request
+    
+    
     Alice->>John: Hello John, how are you?
     loop Healthcheck
         John->>John: Fight against hypochondria
