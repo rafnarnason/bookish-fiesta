@@ -1,6 +1,7 @@
 ```mermaid
 sequenceDiagram
     autonumber
+    Stofnanir->>Advania
     Alice->>John: Hello John, how are you?
     loop Healthcheck
         John->>John: Fight against hypochondria
