@@ -6,7 +6,7 @@ sequenceDiagram
     User-Notification->Queue:request
     Workers->Queue:request
     Workers->>Firebase:request
-    Firebase->Island.is-client:request
+    Firebase->island.is-user-client:
     
     
    
