@@ -2,6 +2,7 @@
 sequenceDiagram
     autonumber
     Stofnanir->>Advania:request
+    Advania->User-Profile:x-road
     Alice->>John: Hello John, how are you?
     loop Healthcheck
         John->>John: Fight against hypochondria
