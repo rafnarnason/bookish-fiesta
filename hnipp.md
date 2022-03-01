@@ -7,8 +7,8 @@ sequenceDiagram
     Notification-Workers->>User-Notification-Queue:request
     Notification-Workers-->User-Profile:auto-auth
     User-Notification-Queue-->>Notification-Workers:response
-    Workers->>Firebase:request
-    Firebase->island.is-user-client:request
+    Notification-Workers->>Firebase:request
+    Firebase->>island.is-user-client:hnipp
     
     
    
