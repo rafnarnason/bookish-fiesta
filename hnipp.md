@@ -3,9 +3,9 @@ sequenceDiagram
     autonumber
     Stofnanir->>Advania:skeyti
     Advania->>User-Notification-Service:xroad skeyti
-    User-Notification-Service->>User-Notification-Queue:creates queue message
-    Notification-Workers->>User-Notification-Queue:request
-    User-Notification-Queue-->>Notification-Workers:response
+    User-Notification-Service->>AWS SQS:creates queue message
+    Notification-Workers->>AWS SQS:request
+    AWS SQS-->>Notification-Workers:response
     Notification-Workers-->>User-Profile:auto-auth get settings
     User-Profile-->>Notification-Workers:return settings
     
